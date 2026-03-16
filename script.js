@@ -1,12 +1,4 @@
 
-
-/* ================================
-   API KEY
-================================ */
-
-const API_KEY = "AIzaSyCLyWkGFEeQ5UGxGv_ZKlgP95udfIr37XY";
-
-
 /* ================================
    CLIENT DATA
 ================================ */
@@ -267,7 +259,7 @@ HASHTAGS:
     try {
 
         const response = await fetch(
-            "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=" + API_KEY,
+            "/.netlify/functions/generate",
             {
                 method: "POST",
                 headers: {
