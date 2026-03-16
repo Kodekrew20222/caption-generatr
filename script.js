@@ -502,7 +502,18 @@ HASHTAGS:
       }),
     });
 
-    const data = await response.json();
+    const text = await response.text();
+
+    let data;
+
+    try {
+      data = JSON.parse(text);
+    } catch (err) {
+      console.error("Server returned non-JSON:", text);
+      document.getElementById("output").innerHTML =
+        "<div class='text-danger p-3'>Server error. Please try again.</div>";
+      return;
+    }
 
     console.log(data);
 
