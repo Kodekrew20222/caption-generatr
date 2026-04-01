@@ -164,7 +164,7 @@ border-radius:10px;
 
 .preview-image{
 
-max-height:250px;
+max-height:200px;
 border-radius:10px;
 border:1px solid #334155;
 box-shadow:0 6px 18px rgba(0,0,0,0.4);
@@ -212,6 +212,24 @@ opacity:0.9;
 }
 
 /* RESPONSIVE */
+
+@media(max-width:1024px){
+
+.panel-gone{
+    display: none;
+}
+
+body{
+    overflow-y: scroll;
+}
+
+#output{
+max-height: none;
+overflow-y: scroll;
+/* padding-right:10px; */
+}
+
+}
 
 @media(max-width:700px){
 
