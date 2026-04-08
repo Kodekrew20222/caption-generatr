@@ -750,6 +750,16 @@ function renderOutput(text) {
     hashtags = hashtagMatch[1].split(" ");
   }
 
+  /* EXTRACT KEYWORDS */
+
+  const keywordMatch = text.match(/KEYWORDS:\s*(.*)/);
+
+  let keywords = [];
+
+  if (keywordMatch) {
+    keywords = keywordMatch[1].split(",").map((k) => k.trim());
+  }
+
   /* CAPTION CARDS */
 
   captions.forEach((caption) => {
@@ -776,6 +786,22 @@ Copy Caption
 <div class="hashtag-list">
 
 ${hashtags.map((tag) => `<span class="hashtag">${tag}</span>`).join("")}
+
+</div>
+
+</div>
+`;
+
+/* KEYWORD SECTION */
+
+output.innerHTML += `
+<div class="hashtag-section">
+
+<h5 class="hashtag-title">Keywords</h5>
+
+<div class="hashtag-list">
+
+${keywords.map((key) => `<span class="hashtag">${key}</span>`).join("")}
 
 </div>
 
@@ -831,6 +857,7 @@ Analyze the uploaded image.
 Generate:
 1. Three Instagram captions
 2. 20 hashtags
+3. 15 Instagram keywords (SEO/search friendly, no #)
 
 IMPORTANT RULES:
 - Do NOT give explanations
@@ -850,6 +877,9 @@ CAPTION_3:
 
 HASHTAGS:
 #tag1 #tag2 #tag3 #tag4 #tag5 #tag6 #tag7 #tag8 #tag9 #tag10 #tag11 #tag12 #tag13 #tag14 #tag15 #tag16 #tag17 #tag18 #tag19 #tag20
+
+KEYWORDS:
+keyword1, keyword2, keyword3, keyword4, keyword5, keyword6, keyword7, keyword8, keyword9, keyword10, keyword11, keyword12, keyword13, keyword14, keyword15
 `;
 
   /* LOADING STATE */
