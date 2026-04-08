@@ -857,7 +857,7 @@ Analyze the uploaded image.
 Generate:
 1. Three Instagram captions
 2. 20 hashtags
-3. 15 Instagram keywords (SEO/search friendly, no #)
+3. 25 Instagram keywords (SEO/search friendly, no #)
 
 IMPORTANT RULES:
 - Do NOT give explanations
@@ -879,7 +879,9 @@ HASHTAGS:
 #tag1 #tag2 #tag3 #tag4 #tag5 #tag6 #tag7 #tag8 #tag9 #tag10 #tag11 #tag12 #tag13 #tag14 #tag15 #tag16 #tag17 #tag18 #tag19 #tag20
 
 KEYWORDS:
-keyword1, keyword2, keyword3, keyword4, keyword5, keyword6, keyword7, keyword8, keyword9, keyword10, keyword11, keyword12, keyword13, keyword14, keyword15
+keyword1, keyword2, keyword3, keyword4, keyword5, keyword6, keyword7, keyword8, keyword9, keyword10, keyword11, keyword12, keyword13, keyword14, keyword15,
+keyword16, keyword17, keyword18, keyword19, keyword20,
+keyword21, keyword22, keyword23, keyword24, keyword25
 `;
 
   /* LOADING STATE */
